@@ -268,6 +268,12 @@ Service有绑定模式和非绑定模式，以及这两种模式的混合使用�
 我们可以用 setForeground(true) 来设置 Service 的优先级。 当然这并不能保证你得Service 
 永远不被杀掉，只是提高了他的优先级。
 
+### 5.4 如何避免后台进程被杀死？
+
+1. 调用startForegound()，让你的Service所在的线程成为前台进程
+2. Service的onStartCommond()返回START_STICKY或START_REDELIVER_INTENT
+3. Service的onDestroy()里面重新启动自己
+
 参考：
 
 1. [Android Service完全解析，关于服务你所需知道的一切(上)](http://blog.csdn.net/guolin_blog/article/details/11952435)
