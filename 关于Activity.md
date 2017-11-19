@@ -23,6 +23,10 @@
 	3. 接2，此时如果按下Back键，系统返回到桌面，并依次执行**A.onPause()->A.onStop()->A.onDestroy()。
 	4. 接2，此时如果按下Home键（非长按），系统返回到桌面，并依次执行**A.onPause()->A.onStop()**。由此可见，Back键和Home键主要区别在于是否会执行onDestroy。
 	5. 接2，此时如果长按Home键，不同手机可能弹出不同内容，Activity生命周期未发生变化。
+9. 横竖屏切换时候Activity的生命周期：
+	1. 不设置Activity的`android:configChanges`时，切屏会重新调用各个生命周期，切横屏时会执行一次，切竖屏时会执行两次。
+	2. 设置Activity的`android:configChanges=“orientation”`时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次。
+	3. 设置Activity的`android:configChanges=“orientation|keyboardHidden”`时，切屏不会重新调用各个生命周期，只会执行onConfiguration方法。
 
 参考:
 
