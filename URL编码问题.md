@@ -22,6 +22,7 @@
     } catch (UnsupportedEncodingException e) {
         e.printStackTrace();
     }
+
 使用ERLEncoder.encode即可。这样中文就变成上面那串带有%的字符串了。
 
 另外，据说在普通Java程序中调试的时候是没有问题的，但是在Android中就不行了。
