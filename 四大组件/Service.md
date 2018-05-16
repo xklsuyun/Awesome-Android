@@ -73,17 +73,23 @@
         }  
     };
 
-程序执行的情况总结：
+### 总结
 
-1. 当第一次执行startService(startIntent)的时候，会调用该Service中的onCreate()和onStartCommand()方法。
-2. 当第二次执行startService(startIntent)的时候，只会调用该Service中的onStartCommand()方法。（因此已经创建了服务，所以不需要再次调用onCreate()方法了）
-3. bindService()方法的第三个参数是一个标志位，这里传入BIND_AUTO_CREATE表示在Activity和Service建立关联后自动创建Service，这会使得MyService中的onCreate()方法得到执行，但onStartCommand()方法不会执行。所以，在上面的程序中当调用了bindService()方法的时候，会执行的方法有，Service的onCreate()方法，以及ServiceConnection的onServiceConnected()方法。
-4. 在3种中，如果想要停止Service，需要调用unbindService()才行。 
-5. 如果我们既调用了startService()，又调用bindService()会怎么样呢？这时不管你是单独调用stopService()还是unbindService()，Service都不会被销毁，必要将两个方法都调用Service才会被销毁。也就是说，stopService()只会让Service停止，unbindService()只会让Service和Activity解除关联，一个Service必须要在既没有和任何Activity关联又处理停止状态的时候才会被销毁。
+Service的生命周期图
+
+![Service的生命周期图](res/service_life.png)
+
+1. 当第一次执行`startService(intent)`的时候，会调用该Service中的`onCreate()`和`onStartCommand()`方法。
+2. 当第二次执行`startService(intent)`的时候，只会调用该Service中的onStartCommand()方法。（因此已经创建了服务，所以不需要再次调用onCreate()方法了）
+3. `bindService()`方法的第三个参数是一个标志位，这里传入BIND_AUTO_CREATE表示在Activity和Service建立关联后自动创建Service，这会使得MyService中的`onCreate()`方法得到执行，但`onStartCommand()`方法不会执行。所以，在上面的程序中当调用了`bindService()`方法的时候，会执行的方法有，Service的`onCreate()`方法，以及ServiceConnection的`onServiceConnected()`方法。
+4. 在3种中，如果想要停止Service，需要调用`unbindService()`才行。 
+5. 如果我们既调用了`startService()`，又调用`bindService()`会怎么样呢？这时不管你是单独调用stopService()还是unbindService()，Service都不会被销毁，必要将两个方法都调用Service才会被销毁。也就是说，stopService()只会让Service停止，unbindService()只会让Service和Activity解除关联，一个Service必须要在既没有和任何Activity关联又处理停止状态的时候才会被销毁。
 
 ## 2、Service与线程
 
-Service运行在主线程里的，也就是说如果你在Service里编写了非常耗时的代码，程序必定会出现ANR的。 Service只意味着不需要前台UI的支持，即使Activity被销毁，或者程序被关闭，只要进程还在，Service就可以继续运行。但是我们可以在Service中再创建一个子线程，然后在这里去处理耗时逻辑。
+Service运行在主线程里的，也就是说如果你在Service里编写了非常耗时的代码，程序必定会出现ANR的。 
+
+Service只意味着不需要前台UI的支持，即使Activity被销毁，或者程序被关闭，只要进程还在，Service就可以继续运行。但是我们可以在Service中再创建一个子线程，然后在这里去处理耗时逻辑。
 
 虽然也可以在Activity中创建线程来执行耗时任务，但是它的缺点在于该线程只能与该Activity关联，其他Activity无法对其进行控制。
 
@@ -245,8 +251,8 @@ Service运行在主线程里的，也就是说如果你在Service里编写了非
 
 Service有绑定模式和非绑定模式，以及这两种模式的混合使用方式。不同的使用方法生命周期方法也不同。 
 
-1. 非绑定模式：当第一次调用startService的时候执行的方法依次为onCreate()->onStartCommand()；当Service 关闭的时候调用onDestory()。
-2. 绑定模式：第一次bindService()的时候，执行的方法为onCreate()->onBind()；解除绑定的时候会执行onUnbind()->onDestory()。
+1. 非绑定模式：当第一次调用`startService()`的时候执行的方法依次为`onCreate()`->`onStartCommand()`；当Service 关闭的时候调用`onDestory()`。
+2. 绑定模式：第一次`bindService()`的时候，执行的方法为`onCreate()`->`onBind()`；解除绑定的时候会执行`onUnbind()`->`onDestory()`。
  
 我们在开发的过程中还必须注意Service实例只会有一个，也就是说如果当前要启动的Service已经存在了那么就不会再次创建该Service当然也不会调用onCreate()方法。 
 
@@ -259,14 +265,13 @@ Service有绑定模式和非绑定模式，以及这两种模式的混合使用�
 1. 会创建独立的线程来处理所有的Intent请求; 
 2. 会创建独立的线程来处理onHandleIntent()方法实现的代码，无需处理多线程问题; 
 3. 所有请求处理完成后，IntentService会自动停止,无需调用stopSelf()方法停止Service; 
-4. 为Service的onBind()提供默认实现,返回 null; 
+4. 为Service的onBind()提供默认实现,返回null; 
 5. 为Service的onStartCommand提供默认实现，将请求Intent添加到队列中。 
-6. IntentService内置的是HandlerThread作为异步线程，每一个交给IntentService的任务都将以队列的方式逐个被执行到，一旦队列中有某个任务执行时间过长，那么就会导致后续的任务都会被延迟处理正在运行的IntentService的程序相比起纯粹的后台程序更不容易被系统杀死，该程序的优先级是介于前台程序与纯后台程序之间的
+6. IntentService内置的是HandlerThread作为异步线程，每一个交给IntentService的任务都将以队列的方式逐个被执行到，一旦队列中有某个任务执行时间过长，那么就会导致后续的任务都会被延迟处理。正在运行的IntentService的程序相比起纯粹的后台程序更不容易被系统杀死，该程序的优先级是介于前台程序与纯后台程序之间的
 
 ### 5.3 如何提高service的优先级？
 
-我们可以用 setForeground(true) 来设置 Service 的优先级。 当然这并不能保证你得Service 
-永远不被杀掉，只是提高了他的优先级。
+我们可以用 setForeground(true) 来设置Service的优先级。 当然这并不能保证你得Service永远不被杀掉，只是提高了他的优先级。
 
 ### 5.4 如何避免后台进程被杀死？
 

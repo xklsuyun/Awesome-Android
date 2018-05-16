@@ -20,7 +20,7 @@
 |6|`onStart()`方法中主要还是进行初始化工作，而`onResume()`方法，根据官方的建议，可以做开启动画和独占设备的操作|
 |7|`onStop()`阶段Activity还没有被销毁，对象还在内存中，此时可以通过切换Activity再次回到该Activity，而`onDestroy()`阶段Acivity被销毁|
 
-## 3、一些操作中声明周期的总结
+## 3、一些操作中生命周期的总结
 
 ### 3.1 Activity切换 Back键 Home键
 
@@ -30,7 +30,7 @@
 4. 接2，此时如果按下Home键（非长按），系统返回到桌面，并依次执行`A.onPause()->A.onStop()`。由此可见，Back键和Home键主要区别在于是否会执行onDestroy。
 5. 接2，此时如果长按Home键，不同手机可能弹出不同内容，Activity生命周期未发生变化。
 
-### 3.2 横竖屏切换时候Activity的生命周期：
+### 3.2 横竖屏切换时候Activity的生命周期
 
 1. 不设置Activity的`android:configChanges`时，切屏会重新调用各个生命周期，切横屏时会执行一次，切竖屏时会执行两次。
 2. 设置Activity的`android:configChanges=“orientation”`时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次。
