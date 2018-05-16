@@ -275,11 +275,53 @@ Service有绑定模式和非绑定模式，以及这两种模式的混合使用�
 
 ### 5.4 如何避免后台进程被杀死？
 
+服务被杀死的情况：
+
+1. 系统根据资源分配情况杀死服务
+2. 用户通过settings->Apps->Running->Stop方式杀死服务
+3. 用户通过settings->Apps->Downloaded->Force Stop方式杀死服务
+
+解决办法：
+
 1. 调用startForegound()，让你的Service所在的线程成为前台进程
 2. Service的onStartCommond()返回START_STICKY或START_REDELIVER_INTENT
 3. Service的onDestroy()里面重新启动自己
+
+#### onStartCommond()的返回值
+
+|编号|可选值|含义|
+|:-:|:-:|:-:|
+|1|START_STICKY|当Service因内存不足而被系统kill后，一段时间后内存再次空闲时，系统将会尝试重新创建此Service，一旦创建成功后将回调onStartCommand方法，但其中的Intent将是null，除非有挂起的Intent，如pendingintent，这个状态下比较适用于不执行命令、但无限期运行并等待作业的媒体播放器或类似服务|
+|2|START_NOT_STICKY|当Service因内存不足而被系统kill后，即使系统内存再次空闲时，系统也不会尝试重新创建此Service。除非程序中再次调用startService启动此Service，这是最安全的选项，可以避免在不必要时以及应用能够轻松重启所有未完成的作业时运行服务|
+|3|START_REDELIVER_INTENT|当Service因内存不足而被系统kill后，则会重建服务，并通过传递给服务的最后一个 Intent 调用 onStartCommand()，任何挂起 Intent均依次传递。与START_STICKY不同的是，其中的传递的Intent将是非空，是最后一次调用startService中的intent。这个值适用于主动执行应该立即恢复的作业（例如下载文件）的服务|
+
+#### 在onDestroy()中自启的示例
+
+	public void onCreate() {  
+	    super.onCreate();  
+	    mBroadcast = new BroadcastReceiver() {  
+		    @Override  
+		    public void onReceive(Context context, Intent intent) {  
+		        Intent a = new Intent(ServiceA.this, ServiceA.class);  
+		        startService(a);  
+		    }  
+	    };  
+	    mIF = new IntentFilter();  
+	    mIF.addAction("listener");  
+	    registerReceiver(mBroadcast, mIF);  
+	}
+	
+	@Override  
+	public void onDestroy() {  
+	  super.onDestroy();  
+	  Intent intent = new Intent();  
+	  intent.setAction("listener");  
+	  sendBroadcast(intent);  
+	  unregisterReceiver(mBroadcast);  
+	}  
 
 参考：
 
 1. [Android Service完全解析，关于服务你所需知道的一切(上)](http://blog.csdn.net/guolin_blog/article/details/11952435)
 2. [Android Service完全解析，关于服务你所需知道的一切(下)](http://blog.csdn.net/guolin_blog/article/details/9797169)
+3. [关于Android Service真正的完全详解，你需要知道的一切](https://blog.csdn.net/javazejian/article/details/52709857)
