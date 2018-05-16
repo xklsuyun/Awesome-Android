@@ -1,5 +1,9 @@
 # ACRA
 
+ACRA(Application Crash Report for Android)，一个优秀的Android异常日志收集的开源框架. 利用他可以轻松的实现Android APP 异常日志的收集。
+
+[Github](https://github.com/ACRA/acra).
+
 ## 需要依赖：
 
     compile 'ch.acra:acra:4.6.1'
@@ -42,6 +46,7 @@
         android:label="@string/simple_alarm_clock" >
         ...
     </application>
+
 这样就可以当发生程序崩溃的时候进行报告了。
 
 ## 其他说明：
@@ -133,6 +138,3 @@
 如果要获取手机信息的话，不要忘记使用权限：
 
     uses-permissionandroid:name=android.permission.READ_PHONE_STATE
-
-
-

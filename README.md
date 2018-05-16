@@ -1,5 +1,5 @@
-# Android-Programming
+# Android笔记
 
-1. [关于Activity](https://github.com/Shouheng88/Android-Programming/blob/master/%E5%85%B3%E4%BA%8EActivity.md)
-2. 
+> Android学习过程中的笔记，整理了Android相关的基础知识，Java相关的基础知识可以点击[这里](https://github.com/Shouheng88/Java-notes)。
+
 
