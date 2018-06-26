@@ -32,6 +32,13 @@
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|Adapter|[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)|通用Adapter封装，大幅度降低代码量|
+|2|RecyclerView|[XRecyclerView](https://github.com/XRecyclerView/XRecyclerView)|下拉刷新和加载更多|
+
+### 2.2 框架
+
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|快速开发框架|[FastDev4Android](https://github.com/jiangqqlmj/FastDev4Android)|MVP,EventBus,沉浸式,ORM,网络请求|
 
 ## 3、UI资源整理
 
