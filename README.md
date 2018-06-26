@@ -29,9 +29,9 @@
 
 ### 2.1 RecyelerView封装
 
-|编号|分类|名称和地址|
-|:-:|:-:|:-:|
-|1|Adapter|[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)|
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|Adapter|[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)|通用Adapter封装，大幅度降低代码量|
 
 ## 3、UI资源整理
 
