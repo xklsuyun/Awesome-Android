@@ -1,14 +1,10 @@
 # Android笔记
 
-> Android学习过程中的笔记，整理了Android相关的基础知识，Java相关的基础知识可以点击[这里](https://github.com/Shouheng88/Java-notes)。
+> 该项目用于整理Android开发和学习过程中遇到的问题和资料。
 
-## 源码分析
+## 1、安卓系统
 
-|编号|名称|
-|:-:|:-:|
-|1|[LruCache源码分析](源码/LruCache.md)|
-
-## 四大组件
+### 1.1 四大组件
 
 |编号|名称|
 |:-:|:-:|
@@ -17,15 +13,33 @@
 |3|[ContentProvider 内容提供者](四大组件/ContentProvider.md)|
 |4|[BroadcastReceiver 广播接收器](四大组件/BroadcastReceiver.md)|
 
-### 相关
+### 1.2 其他组件
 
 |编号|名称|
 |:-:|:-:|
 |1|[Fragment](四大组件/Fragment.md)|
 
-## 面试题
+### 1.3 源码分析
 
-## 资料
+|编号|名称|
+|:-:|:-:|
+|1|[LruCache源码分析](源码/LruCache.md)|
+
+## 2、三方库整理
+
+### 2.1 RecyelerView封装
+
+|编号|分类|名称和地址|
+|:-:|:-:|:-:|
+|1|Adapter|[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)|
+
+## 3、UI资源整理
+
+## 4、开源项目整理
+
+## 5、面试题
+
+## 6、学习资料
 
 |编号|书名|关键词|
 |:-:|:-:|:-:|
