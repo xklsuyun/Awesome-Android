@@ -35,9 +35,13 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |5|LayoutManager|[vlayout](https://github.com/alibaba/vlayout)|阿里,LayoutManager|
 |6|RecyclerView|[EasyRecyclerView](https://github.com/Jude95/EasyRecyclerView)|More,Header/Footer,EmptyView,ProgressView,ErrorView|
 |7|RecyclerView|[MaterialScrollBar](https://github.com/turing-tech/MaterialScrollBar)|快速滑动|
-|8||[]()||
-|9||[]()||
-|10||[]()||
+|8|RecyclerView|[sticky-headers-recyclerview](https://github.com/timehop/sticky-headers-recyclerview)|顶部固定|
+|9|RecyclerView|[RecyclerViewSnap](https://github.com/rubensousa/RecyclerViewSnap)||
+|10|Adapter|[FastAdapter](https://github.com/mikepenz/FastAdapter)||
+|11|RecyclerView|[RecyclerViewFastScroller](https://github.com/danoz73/RecyclerViewFastScroller)|快速滑动|
+|12|RecyclerView|[RecyclerView-FastScroll](https://github.com/timusus/RecyclerView-FastScroll)||
+|13||[]()||
+|14||[]()||
 
 ### 2.2 开发框架
 
@@ -68,6 +72,8 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |10|截屏|[WebviewCapture](https://github.com/hsk256/WebviewCapture)|关于Webview的几种截屏方式|
 |11|设备名|[AndroidDeviceNames](https://github.com/jaredrummler/AndroidDeviceNames)||
 |12|汉字转拼音|[TinyPinyin](https://github.com/promeG/TinyPinyin)||
+|13|图片选择器|[ImagePicker](https://github.com/martin90s/ImagePicker)||
+|13||[]()||
 |13||[]()||
 
 ### 2.4 持久化
@@ -85,10 +91,12 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|HTTP客户端|[retrofit](https://github.com/square/retrofit)|Type-safe HTTP client for Android and Java by Square, Inc. |
-|2||[]()||
-|3||[]()||
-|4||[]()||
-|5||[]()||
+|2|异步Http库|[android-async-http](https://github.com/loopj/android-async-http)||
+|3|封装OKHttp|[OKHttpUtils](https://github.com/duzechao/OKHttpUtils)||
+|4|封装OKHttp|[OkGo](https://github.com/jeasonlzy/okhttp-OkGo)|| 
+|5|OKHttp|[OKHttp](https://github.com/square/okhttp)||
+|6|封装OKHttp|[okhttputils](https://github.com/hongyangAndroid/okhttputils)||
+|7||[]()||
 
 ### 2.6 图片
 
@@ -98,14 +106,18 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |2|原型图片|[CircleImageView](https://github.com/hdodenhof/CircleImageView)||
 |3|图片模糊|[GaussianBlur](https://github.com/jrvansuita/GaussianBlur)||
 |4|图片压缩|[Luban](https://github.com/Curzibn/Luban)||
+|5|图片放缩|[subsampling-scale-image-view)](https://github.com/davemorrissey/subsampling-scale-image-view)||
+|6|图片选择器|[ImagePicker](https://github.com/martin90s/ImagePicker)||
+|5|图片选择器|[ImagePicker](https://github.com/jeasonlzy/ImagePicker)||
+|5||[]()||
 |5||[]()||
 
 ### 2.7 交互&切换
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
-|1|Activity 滑动返回|[BGASwipeBackLayout-Android](https://github.com/bingoogolapple/BGASwipeBackLayout-Android)||
-|2||[]()||
+|1|滑动返回|[BGASwipeBackLayout-Android](https://github.com/bingoogolapple/BGASwipeBackLayout-Android)||
+|2|切换动画|[Transitions](https://github.com/rubensousa/Transitions)|示例程序|
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -135,7 +147,23 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |9|进度条|[ProgressWheel](https://github.com/Todd-Davies/ProgressWheel)||
 |10|列表控件，类似ViewPager|[DiscreteScrollView](https://github.com/yarolegovich/DiscreteScrollView)||
 |11|密码|[PinLockView](https://github.com/aritraroy/PinLockView)||
-|12||[]()||
+|12|进度条|[verticalseekbar](https://github.com/h6ah4i/android-verticalseekbar)||
+|13|进度条|[BubbleSeekBar](https://github.com/woxingxiao/BubbleSeekBar)||
+|14|Markdown预览|[RxMarkdown](https://github.com/yydcdut/RxMarkdown)||
+|15|按钮|[RaiflatButton](https://github.com/rubensousa/RaiflatButton)|浮动|
+|16|进度条|[PreviewSeekBar](https://github.com/rubensousa/PreviewSeekBar)|视频预览|
+|17||[]()||
+|18||[]()||
+|19||[]()||
+|20||[]()||
+
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|FAB|[FloatingToolbar](https://github.com/rubensousa/FloatingToolbar)|FAB转Toolbar|
+|2||[]()||
+|3||[]()||
+|4||[]()||
+
 
 ### 布局
 
@@ -196,6 +224,9 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |3|选择器类库|[AndroidPicker](https://github.com/gzu-liyujiang/AndroidPicker)||
 |4|各种对话框|[material-dialogs](https://github.com/afollestad/material-dialogs)||
 |5|底部|[BottomSheet](https://github.com/Kennyc1012/BottomSheet)||
+|6|底部|[BottomSheetBuilder](https://github.com/rubensousa/BottomSheetBuilder)||
+|7||[]()||
+|8||[]()||
 
 ### 2.14 时间&日期
 
@@ -215,10 +246,12 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|WebView 全方面的使用|[WebViewStudy](https://github.com/youlookwhat/WebViewStudy)||
-|2||[]()||
-|3||[]()||
-|4||[]()||
-|5||[]()||
+|2|Android 讨论|[android-discuss](https://github.com/android-cn/android-discuss)||
+|3|Android 内推|[android-jobs](https://github.com/android-cn/android-jobs)||
+|4|Android 开源整理|[android-open-project](https://github.com/Trinea/android-open-project)||
+|5|Android 开源整理|[android-open-project-analysis](https://github.com/android-cn/android-open-project-analysis)||
+|6|Android 开源整理|[open-source-android-apps](https://github.com/pcqpcq/open-source-android-apps)||
+|7||[]()||
 
 ### 2.16 其他
 
@@ -238,7 +271,7 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|设计|[awesome-design-cn](https://github.com/jobbole/awesome-design-cn)|设计师资源|
-|2||[]()||
+|2|图标|[Android-Iconics](https://github.com/mikepenz/Android-Iconics)||
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -253,7 +286,7 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |4|诗词|[Android-poetry](https://github.com/VinsonGuo/android-poetry)|客户端+服务器|
 |5|微Yue电子书|[微Yue电子书](https://github.com/LiangLuDev/WeYueReader)||
 |6|简阅|[SimplifyReader](https://github.com/chentao0707/SimplifyReader)||
-|7|Android 平台开源天气 App|[MinimalistWeather](https://github.com/BaronZ88/MinimalistWeather)||
+|7|天气|[MinimalistWeather](https://github.com/BaronZ88/MinimalistWeather)||
 |8|编辑器|[Turbo Editor](https://github.com/vmihalachi/turbo-editor)||
 |9|笔记+TODO|[rgzly-android](https://github.com/orgzly/orgzly-android)||
 |10|Markdown编辑器|[MarkdownEditors](https://github.com/qinci/MarkdownEditors)||
@@ -262,13 +295,21 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |13|计算器|[DarkCalculator](https://github.com/HK-SHAO/DarkCalculator)|一款支持复数运算和解方程等功能的计算器|
 |14|计算器|[ncalc](https://github.com/tranleduy2000/ncalc)||
 |15|相册|[LeafPic](https://github.com/HoraApps/LeafPic)||
-|16|Eyepetizer|[Eyepetizer-in-Kotlin](https://github.com/LRH1993/Eyepetizer-in-Kotlin)||
+|16|开眼|[Eyepetizer-in-Kotlin](https://github.com/LRH1993/Eyepetizer-in-Kotlin)||
 |17|笔记|[simplenote](https://github.com/Automattic/simplenote-android)||
 |19|文件管理|[aFileChooser](https://github.com/iPaulPro/aFileChooser)||
 |20|云阅|[CloudReader](https://github.com/youlookwhat/CloudReader)|基于网易云音乐UI，使用GankIo及豆瓣api|
-|21||[]()||
-|22||[]()||
-|23||[]()||
+|21|MaterialDesign示例|[LollipopShowcase](https://github.com/mikepenz/LollipopShowcase)|MaterialDesign示例|
+|22|天气|[Weather](https://github.com/Mixiaoxiao/Weather)||
+|23|音乐播放器|[Shuttle](https://github.com/timusus/Shuttle)||
+|24|文件管理|[AnExplorer](https://github.com/1hakr/AnExplorer)||
+|25|旅行|[Travel-Mate](https://github.com/project-travel-mate/Travel-Mate)||
+|26|新闻 天气|[SuperMvp](https://github.com/liuyanggithub/SuperMvp)||
+|27|MaterialDesign示例|[MaterialDesignDemo](https://github.com/Eajy/MaterialDesignDemo)||
+|28|音乐播放器|[MusicX-music-player](https://github.com/RajneeshSingh007/MusicX-music-player)||
+|29|全民直播|[KingTV](https://github.com/jenly1314/KingTV)||
+|30|开眼|[KotlinMvp](https://github.com/git-xuhao/KotlinMvp)||
+|31|开眼|[Eyepetizer](https://github.com/kaikaixue/Eyepetizer)||
 
 ## 5、面试题整理
 
