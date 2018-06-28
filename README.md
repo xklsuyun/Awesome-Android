@@ -67,7 +67,7 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |9|混淆|[android-proguards](https://github.com/yongjhih/android-proguards)||
 |10|截屏|[WebviewCapture](https://github.com/hsk256/WebviewCapture)|关于Webview的几种截屏方式|
 |11|设备名|[AndroidDeviceNames](https://github.com/jaredrummler/AndroidDeviceNames)||
-|12||[]()||
+|12|汉字转拼音|[TinyPinyin](https://github.com/promeG/TinyPinyin)||
 |13||[]()||
 
 ### 2.4 持久化
