@@ -34,7 +34,7 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |4|RecyclerView|[android-advancedrecyclerview](https://github.com/h6ah4i/android-advancedrecyclerview)|融合了多种RecyclerView功能|
 |5|LayoutManager|[vlayout](https://github.com/alibaba/vlayout)|阿里,LayoutManager|
 |6|RecyclerView|[EasyRecyclerView](https://github.com/Jude95/EasyRecyclerView)|More,Header/Footer,EmptyView,ProgressView,ErrorView|
-|7||[]()||
+|7|RecyclerView|[MaterialScrollBar](https://github.com/turing-tech/MaterialScrollBar)|快速滑动|
 |8||[]()||
 |9||[]()||
 |10||[]()||
@@ -47,8 +47,8 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |2|快速组件化方案|[ArmsComponent](https://github.com/JessYanCoding/ArmsComponent)|Arms,MVP,组件化|
 |3|MVP快速化方案|[MVPArms](https://github.com/JessYanCoding/MVPArms)|Arms,MVP,常用开发模块|
 |4|MVVM|[android-mvvm-architecture](https://github.com/MindorksOpenSource/android-mvvm-architecture)|MVVM示例程序|
-|5||[RapidView](https://github.com/Tencent/RapidView)|UI和轻量级开发框架|
-|6||[]()||
+|5|UI和轻量级开发框架|[RapidView](https://github.com/Tencent/RapidView)|UI和轻量级开发框架|
+|6|MVVM|[AndroidArchitecture](https://github.com/iammert/AndroidArchitecture)|LiveData, Room Persistence, Dagger 2, Retrofit, MVVM and DataBinding|
 |7||[]()||
 |8||[]()||
 
@@ -62,8 +62,13 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |4|Java算法库|[TheAlgorithms-Java](https://github.com/TheAlgorithms/Java)||
 |5|加密|[Encrypt](https://github.com/GcsSloop/encrypt)||
 |6|Markdown解析|[flexmark-java](https://github.com/vsch/flexmark-java)||
-|7||[]()||
-|8||[]()||
+|7|数学计算|[Calci-kernel](https://github.com/Iraka-C/Calci-kernel)|A complex calculation kernel in Java (for Calci calculator)|
+|8|设计模式|[java-design-patterns](https://github.com/iluwatar/java-design-patterns)||
+|9|混淆|[android-proguards](https://github.com/yongjhih/android-proguards)||
+|10|截屏|[WebviewCapture](https://github.com/hsk256/WebviewCapture)|关于Webview的几种截屏方式|
+|11|设备名|[AndroidDeviceNames](https://github.com/jaredrummler/AndroidDeviceNames)||
+|12||[]()||
+|13||[]()||
 
 ### 2.4 持久化
 
@@ -124,17 +129,20 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |3|进度条|[MaterialProgressBar](https://github.com/DreaminginCodeZH/MaterialProgressBar)||
 |4|ViewPager指示器|[ViewPagerIndicator](https://github.com/JakeWharton/ViewPagerIndicator)||
 |5|关于页|[MaterialAbout](https://github.com/jrvansuita/MaterialAbout)||
-|2|Markdown预览|[MarkdownView](https://github.com/tiagohm/MarkdownView)||
-|3|ViewPager指示器|[MagicIndicator](https://github.com/hackware1993/MagicIndicator)||
-|4||[]()||
-|5||[]()||
+|6|Markdown预览|[MarkdownView](https://github.com/tiagohm/MarkdownView)||
+|7|ViewPager指示器|[MagicIndicator](https://github.com/hackware1993/MagicIndicator)||
+|8|质感控件合集|[material-components-android](https://github.com/material-components/material-components-android)||
+|9|进度条|[ProgressWheel](https://github.com/Todd-Davies/ProgressWheel)||
+|10|列表控件，类似ViewPager|[DiscreteScrollView](https://github.com/yarolegovich/DiscreteScrollView)||
+|11|密码|[PinLockView](https://github.com/aritraroy/PinLockView)||
+|12||[]()||
 
 ### 布局
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|抽屉|[MaterialDrawer](https://github.com/mikepenz/MaterialDrawer)||
-|2||[]()||
+|2|分页|[android-vertical-slide-view](https://github.com/xmuSistone/VerticalSlideFragment)|在商品详情页，向上拖动时，可以加载下一页|
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -155,7 +163,7 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |:-:|:-:|:-:|:-:|
 |1|调试|[Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)||
 |2|调试|[GT](https://github.com/Tencent/GT)|腾讯，APP的随身调试平台|
-|3||[]()||
+|3|调试|[stetho](https://github.com/facebook/stetho)||
 |4||[]()||
 |5||[]()||
 
@@ -197,13 +205,16 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |2|日历|[CalendarView](https://github.com/huanghaibin-dev/CalendarView)||
 |3|周历|[Android-Week-View](https://github.com/alamkanak/Android-Week-View)|1天，3天，7天|
 |4|日历|[Calendar](https://github.com/xiaojianglaile/Calendar)||
-|5||[]()||
+|5|日历桌面小部件|[Android-MonthCalendarWidget](https://github.com/romannurik/Android-MonthCalendarWidget)||
+|6||[]()||
+|7||[]()||
+|8||[]()||
 
 ### 2.15 资源
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
-|1||[]()||
+|1|WebView 全方面的使用|[WebViewStudy](https://github.com/youlookwhat/WebViewStudy)||
 |2||[]()||
 |3||[]()||
 |4||[]()||
@@ -218,9 +229,9 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |3|lambda|[retrolambda](https://github.com/orfjackal/retrolambda)|Backport of Java 8's lambda expressions to Java 7, 6 and 5|
 |4|滑动越界效果|[OverScroll-Everywhere](https://github.com/Mixiaoxiao/OverScroll-Everywhere)|滑动到顶部或者底部的时候会有下拉或上拉的效果|
 |5|快速滑动|[FastScroll-Everywhere](https://github.com/Mixiaoxiao/FastScroll-Everywhere)|为任意可滑动的View添加快速滑动|
-|5||[]()||
-|5||[]()||
-|5||[]()||
+|6|lambda|[gradle-retrolambda](https://github.com/evant/gradle-retrolambda)|A gradle plugin for getting java lambda support in java 6, 7 and android|
+|7||[]()||
+|8||[]()||
 
 ## 3、UI资源整理
 
@@ -246,10 +257,18 @@ Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastRe
 |8|编辑器|[Turbo Editor](https://github.com/vmihalachi/turbo-editor)||
 |9|笔记+TODO|[rgzly-android](https://github.com/orgzly/orgzly-android)||
 |10|Markdown编辑器|[MarkdownEditors](https://github.com/qinci/MarkdownEditors)||
-|11||[]()||
-|12||[]()||
-|13||[]()||
-
+|11|高仿微信|[wechat](https://github.com/motianhuo/wechat)||
+|12|微信小视频+秒拍|[VCameraDemo](https://github.com/motianhuo/VCameraDemo)|微信小视频+秒拍,FFmpeg库封装|
+|13|计算器|[DarkCalculator](https://github.com/HK-SHAO/DarkCalculator)|一款支持复数运算和解方程等功能的计算器|
+|14|计算器|[ncalc](https://github.com/tranleduy2000/ncalc)||
+|15|相册|[LeafPic](https://github.com/HoraApps/LeafPic)||
+|16|Eyepetizer|[Eyepetizer-in-Kotlin](https://github.com/LRH1993/Eyepetizer-in-Kotlin)||
+|17|笔记|[simplenote](https://github.com/Automattic/simplenote-android)||
+|19|文件管理|[aFileChooser](https://github.com/iPaulPro/aFileChooser)||
+|20|云阅|[CloudReader](https://github.com/youlookwhat/CloudReader)|基于网易云音乐UI，使用GankIo及豆瓣api|
+|21||[]()||
+|22||[]()||
+|23||[]()||
 
 ## 5、面试题整理
 
