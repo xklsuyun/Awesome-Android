@@ -1,10 +1,12 @@
 # Android笔记
 
-> 该项目用于整理Android开发和学习过程中遇到的问题和资料。
+> 该项目用于整理Android开发和学习过程中遇到的问题、资料和资源等等，以便于快速查找相关的内容。
 
 ## 1、安卓系统
 
 ### 1.1 四大组件
+
+Android上面的四大组件是:Activity, Service, ContentProvider和BroadcastReceiver。这里我加入了Fragment用于和Activity形成对比。
 
 |编号|名称|
 |:-:|:-:|
@@ -12,12 +14,7 @@
 |2|[Service](四大组件/Service.md)|
 |3|[ContentProvider 内容提供者](四大组件/ContentProvider.md)|
 |4|[BroadcastReceiver 广播接收器](四大组件/BroadcastReceiver.md)|
-
-### 1.2 其他组件
-
-|编号|名称|
-|:-:|:-:|
-|1|[Fragment](四大组件/Fragment.md)|
+|5|[Fragment](四大组件/Fragment.md)|
 
 ### 1.3 源码分析
 
@@ -50,7 +47,7 @@
 |2|快速组件化方案|[ArmsComponent](https://github.com/JessYanCoding/ArmsComponent)|Arms,MVP,组件化|
 |3|MVP快速化方案|[MVPArms](https://github.com/JessYanCoding/MVPArms)|Arms,MVP,常用开发模块|
 |4|MVVM|[android-mvvm-architecture](https://github.com/MindorksOpenSource/android-mvvm-architecture)|MVVM示例程序|
-|5||[]()||
+|5||[RapidView](https://github.com/Tencent/RapidView)|UI和轻量级开发框架|
 |6||[]()||
 |7||[]()||
 |8||[]()||
@@ -61,16 +58,19 @@
 |:-:|:-:|:-:|:-:|
 |1|工具库|[RxTool](https://github.com/vondear/RxTool)|Android开发人员不得不收集的工具类集合|
 |2|工具库|[AndroidUtils](https://github.com/Blizzard-liu/AndroidUtils)|安卓攻城狮必备神器|
-|3||[]()||
-|4||[]()||
-|5||[]()||
+|3|Java库|[guava](https://github.com/google/guava)|Google Java 核心库|
+|4|Java算法库|[TheAlgorithms-Java](https://github.com/TheAlgorithms/Java)||
+|5|加密|[Encrypt](https://github.com/GcsSloop/encrypt)||
+|6|Markdown解析|[flexmark-java](https://github.com/vsch/flexmark-java)||
+|7||[]()||
+|8||[]()||
 
 ### 2.4 持久化
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|磁盘缓存|[DiskLruCache](https://github.com/JakeWharton/DiskLruCache)||
-|2||[]()||
+|2|数据库|[wcdb](https://github.com/Tencent/wcdb)|跨平台数据库框架|
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -79,7 +79,7 @@
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
-|1||[]()||
+|1|HTTP客户端|[retrofit](https://github.com/square/retrofit)|Type-safe HTTP client for Android and Java by Square, Inc. |
 |2||[]()||
 |3||[]()||
 |4||[]()||
@@ -91,8 +91,8 @@
 |:-:|:-:|:-:|:-:|
 |1|图片模糊|[StackBlur](https://github.com/kikoso/android-stackblur)||
 |2|原型图片|[CircleImageView](https://github.com/hdodenhof/CircleImageView)||
-|3||[]()||
-|4||[]()||
+|3|图片模糊|[GaussianBlur](https://github.com/jrvansuita/GaussianBlur)||
+|4|图片压缩|[Luban](https://github.com/Curzibn/Luban)||
 |5||[]()||
 
 ### 2.7 交互&切换
@@ -109,7 +109,7 @@
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
-|1||[]()||
+|1|水波纹扩散效果|[WaveView](https://github.com/hackware1993/WaveView)||
 |2||[]()||
 |3||[]()||
 |4||[]()||
@@ -121,6 +121,30 @@
 |:-:|:-:|:-:|:-:|
 |1|工具栏|[ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock)||
 |2|欢迎页|[AppIntro](https://github.com/apl-devs/AppIntro)||
+|3|进度条|[MaterialProgressBar](https://github.com/DreaminginCodeZH/MaterialProgressBar)||
+|4|ViewPager指示器|[ViewPagerIndicator](https://github.com/JakeWharton/ViewPagerIndicator)||
+|5|关于页|[MaterialAbout](https://github.com/jrvansuita/MaterialAbout)||
+|2|Markdown预览|[MarkdownView](https://github.com/tiagohm/MarkdownView)||
+|3|ViewPager指示器|[MagicIndicator](https://github.com/hackware1993/MagicIndicator)||
+|4||[]()||
+|5||[]()||
+
+### 布局
+
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|抽屉|[MaterialDrawer](https://github.com/mikepenz/MaterialDrawer)||
+|2||[]()||
+|3||[]()||
+|4||[]()||
+|5||[]()||
+
+### 图表
+
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|多种|[MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)||
+|2||[]()||
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -130,7 +154,7 @@
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|调试|[Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)||
-|2||[]()||
+|2|调试|[GT](https://github.com/Tencent/GT)|腾讯，APP的随身调试平台|
 |3||[]()||
 |4||[]()||
 |5||[]()||
@@ -145,27 +169,37 @@
 |4||[]()||
 |5||[]()||
 
-### 2.12 视频&音频
+### 2.12 视频&音频&相机
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|视频播放|[NiceVieoPlayer](https://github.com/xiaoyanger0825/NiceVieoPlayer)||
-|2||[]()||
+|2|相机&图片|[MagicCamera](https://github.com/wuhaoyu1990/MagicCamera)|包含美颜等40余种实时滤镜相机，可拍照、录像、图片修改|
 |3||[]()||
 |4||[]()||
 |5||[]()||
 
-### 2.14 对话框
+### 2.13 对话框
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
 |1|底部|[BottomDialog](https://github.com/shaohui10086/BottomDialog)||
 |2|底部|[bottomsheet](https://github.com/Flipboard/bottomsheet)||
 |3|选择器类库|[AndroidPicker](https://github.com/gzu-liyujiang/AndroidPicker)||
-|4||[]()||
+|4|各种对话框|[material-dialogs](https://github.com/afollestad/material-dialogs)||
+|5|底部|[BottomSheet](https://github.com/Kennyc1012/BottomSheet)||
+
+### 2.14 时间&日期
+
+|编号|分类|名称和地址|备注|
+|:-:|:-:|:-:|:-:|
+|1|时间API|[joda-time](https://github.com/JodaOrg/joda-time)||
+|2|日历|[CalendarView](https://github.com/huanghaibin-dev/CalendarView)||
+|3|周历|[Android-Week-View](https://github.com/alamkanak/Android-Week-View)|1天，3天，7天|
+|4|日历|[Calendar](https://github.com/xiaojianglaile/Calendar)||
 |5||[]()||
 
-### 2.15 时间&日期
+### 2.15 资源
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
@@ -182,7 +216,10 @@
 |1|权限|[AndPermission](https://github.com/yanzhenjie/AndPermission)||
 |2|反编译|[dex2jar](https://github.com/pxb1988/dex2jar)||
 |3|lambda|[retrolambda](https://github.com/orfjackal/retrolambda)|Backport of Java 8's lambda expressions to Java 7, 6 and 5|
-|4||[]()||
+|4|滑动越界效果|[OverScroll-Everywhere](https://github.com/Mixiaoxiao/OverScroll-Everywhere)|滑动到顶部或者底部的时候会有下拉或上拉的效果|
+|5|快速滑动|[FastScroll-Everywhere](https://github.com/Mixiaoxiao/FastScroll-Everywhere)|为任意可滑动的View添加快速滑动|
+|5||[]()||
+|5||[]()||
 |5||[]()||
 
 ## 3、UI资源整理
@@ -195,7 +232,7 @@
 |4||[]()||
 |5||[]()||
 
-## 4、开源项目整理
+## 4、开源APP
 
 |编号|分类|名称和地址|备注|
 |:-:|:-:|:-:|:-:|
@@ -205,13 +242,18 @@
 |4|诗词|[Android-poetry](https://github.com/VinsonGuo/android-poetry)|客户端+服务器|
 |5|微Yue电子书|[微Yue电子书](https://github.com/LiangLuDev/WeYueReader)||
 |6|简阅|[SimplifyReader](https://github.com/chentao0707/SimplifyReader)||
-|7||[]()||
-|8||[]()||
-|9||[]()||
+|7|Android 平台开源天气 App|[MinimalistWeather](https://github.com/BaronZ88/MinimalistWeather)||
+|8|编辑器|[Turbo Editor](https://github.com/vmihalachi/turbo-editor)||
+|9|笔记+TODO|[rgzly-android](https://github.com/orgzly/orgzly-android)||
+|10|Markdown编辑器|[MarkdownEditors](https://github.com/qinci/MarkdownEditors)||
+|11||[]()||
+|12||[]()||
+|13||[]()||
 
-## 5、面试题
 
-## 6、学习资料
+## 5、面试题整理
+
+## 6、学习资料整理
 
 |编号|书名|关键词|
 |:-:|:-:|:-:|
