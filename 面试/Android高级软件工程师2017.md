@@ -3,7 +3,7 @@
 - [ ] SpareArray原理
 - [ ] LRUCache原理
 - [ ] HashMap实现原理，ConcurrentHashMap 的实现原理
-- [ ] ThreadLocal原理
+- [x] ThreadLocal原理：[ThreadLocal的使用及其源码实现](https://juejin.im/post/5b44cd7c6fb9a04f980cb065)
 - [ ] 线程间 操作 List
 - [ ] OSGI
 - [ ] synchronized与Lock的区别
