@@ -1,24 +1,75 @@
 # Awesome Android
 
-> 该项目用于整理Android开发和学习过程中遇到的问题、资料和资源等等，以便于快速查找相关的内容。
+> Android 相关的笔记整理、资源整理
 
-## 1、资源整理
+更多：[前端](https://github.com/Shouheng88/Front-end-notes)  |  [Java](https://github.com/Shouheng88/Awesome-Java)  |  [Python](https://github.com/Shouheng88/Python-notes)
 
-|编号|分类|名称和地址|备注|
-|:-:|:-:|:-:|:-:|
-|1|Android 开源整理|[Android-open-project](https://github.com/Trinea/android-open-project)||
-|2|Android 开源整理|[Android-open-project-analysis](https://github.com/android-cn/android-open-project-analysis)||
-|3|Android 开源整理|[Open-source-android-apps](https://github.com/pcqpcq/open-source-android-apps)||
-|4|Android 开发资源|[Android-Develop-Resources](https://github.com/zmywly8866/Android-Develop-Resources)||
-|5|Android 控件库整理|[Awesome-android-ui](https://github.com/wasabeef/awesome-android-ui)||
-|6|Android 讨论|[Android-discuss](https://github.com/android-cn/android-discuss)||
-|7|Android 内推|[Android-jobs](https://github.com/android-cn/android-jobs)||
-|8|Android 面试题|[Android-interview-questions](https://github.com/MindorksOpenSource/android-interview-questions)||
-|9|Android 学习|[AndroidNote](https://github.com/GcsSloop/AndroidNote)||
-|10|Android 学习|[CoreLink](https://github.com/lizhangqu/CoreLink)||
-|11|Android 学习|[Android_Data](https://github.com/Freelander/Android_Data)||
-|12|Android 示例|[android-examples](https://github.com/nisrulz/android-examples)||
+## 目录
 
-个人整理了开发过程中常用的库、控件、学习资源和开源项目等等，点击这里->[资源整理](第三方库/第三方库整理.md)
+- [四大组件](#components)
+- [控件](#views)
+- [资源](#resources)
+- [图片](#images)
+- [动画](#animation)
+- [消息机制](#message)
+- [网络](#network)
+- [多线程](#multi_threads)
+- [JNI&NDK](#jni_ndk)
+- [响应式编程](#reactive)
+- [Kotlin](#kotlin)
+- [结构设计](#structure)
+- [性能优化 & 异常处理](#performance)
+- [三方库学习](#libararies)
+- [资源整理](#make_up)
 
-## 2、个人笔记
+## 详细目录
+
+<h2 id="components">四大组件</h2>
+
+*Activity Service Broadcast ContentProvider*
+
+<h2 id="views">控件</h2>
+
+*常用控件梳理 事件分发机制 自定义控件 Window*
+
+<h2 id="resources">资源</h2>
+
+*Strings Dimens Drawable Menu Array*
+
+<h2 id="images">图片</h2>
+
+*Bitmap Drawable Glide*
+
+<h2 id="animation">动画</h2>
+
+*View动画 属性动画 帧动画*
+
+<h2 id="message">消息机制</h2>
+
+*IPC*
+
+<h2 id="network">网络</h2>
+
+*OKHttp*
+
+<h2 id="multi_threads">多线程</h2>
+
+*多线程 JUC*
+
+<h2 id="jni_ndk">JNI & NDK</h2>
+
+*JNI & NDK*
+
+<h2 id="reactive">响应式编程</h2>
+
+<h2 id="kotlin">Kotlin</h2>
+
+<h2 id="structure">结构设计</h2>
+
+<h2 id="performance">性能优化&异常处理</h2>
+
+<h2 id="libararies">三方库学习</h2>
+
+<h2 id="make_up">资源整理</h2>
+
+
