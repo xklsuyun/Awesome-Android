@@ -56,6 +56,10 @@
 
 *多线程 JUC*
 
+- [AsyncTask的使用和源码分析](多线程/AsyncTask源码分析.md)
+
+*注：Java并发编程部分请参考：[Awesome Java - 并发编程](https://github.com/Shouheng88/Awesome-Java#java)*
+
 <h2 id="jni_ndk">JNI & NDK</h2>
 
 *JNI & NDK*
