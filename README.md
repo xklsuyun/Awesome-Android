@@ -14,6 +14,7 @@
 - [消息机制](#message)
 - [网络](#network)
 - [多线程](#multi_threads)
+- [多媒体](#media)
 - [JNI&NDK](#jni_ndk)
 - [响应式编程](#reactive)
 - [Kotlin](#kotlin)
@@ -48,6 +49,8 @@
 
 *IPC*
 
+- [EventBus 的使用和源码解析](消息机制/)
+
 <h2 id="network">网络</h2>
 
 *OKHttp*
@@ -60,11 +63,17 @@
 
 *注：Java并发编程部分请参考：[Awesome Java - 并发编程](https://github.com/Shouheng88/Awesome-Java#java)*
 
+<h2 id="media">多媒体</h2>
+
+*音频 视频 录音 地理信息*
+
 <h2 id="jni_ndk">JNI & NDK</h2>
 
 *JNI & NDK*
 
 <h2 id="reactive">响应式编程</h2>
+
+*RxJava*
 
 <h2 id="kotlin">Kotlin</h2>
 
