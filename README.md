@@ -47,9 +47,10 @@
 
 <h2 id="message">消息机制</h2>
 
-*IPC*
+*EventBus IPC*
 
-- [EventBus 的使用和源码解析](消息机制/)
+- [EventBus 的使用使用](消息机制/EventBus的使用.md)
+- [EventBus 的源码解析](消息机制/EventBus的源码分析.md)
 
 <h2 id="network">网络</h2>
 

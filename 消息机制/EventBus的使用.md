@@ -1,18 +1,16 @@
-# Android EventBus 的使用和源码解析
+# EventBus 的使用
 
-## 1、基础使用
-
-### 1.1 EventBus 简介
+## 1、EventBus 简介
 
 EventBus是一种用于Android的事件发布-订阅总线，由GreenRobot开发，Gihub地址是：[EventBus](https://github.com/greenrobot/EventBus)。它简化了应用程序内各个组件之间进行通信的复杂度，尤其是碎片之间进行通信的问题，可以避免由于使用广播通信而带来的诸多不便。
 
-#### 三个角色
+### 1.1 三个角色
 
 1. **Event**：事件，它可以是任意类型，EventBus会根据事件类型进行全局的通知。
 2. **Subscriber**：事件订阅者，在EventBus 3.0之前我们必须定义以onEvent开头的那几个方法，分别是`onEvent`、`onEventMainThread`、`onEventBackgroundThread`和`onEventAsync`，而在3.0之后事件处理的方法名可以随意取，不过需要加上注解`@subscribe`，并且指定线程模型，默认是`POSTING`。
 3. **Publisher**：事件的发布者，可以在任意线程里发布事件。一般情况下，使用`EventBus.getDefault()`就可以得到一个EventBus对象，然后再调用`post(Object)`方法即可。
 
-#### 四种线程模型
+### 1.2 四种线程模型
 
 EventBus3.0有四种线程模型，分别是：
 
@@ -21,15 +19,15 @@ EventBus3.0有四种线程模型，分别是：
 3. **BACKGROUND**：表示事件处理函数的线程在后台线程，因此不能进行UI操作。如果发布事件的线程是主线程(UI线程)，那么事件处理函数将会开启一个后台线程，如果果发布事件的线程是在后台线程，那么事件处理函数就使用该线程。
 4. **ASYNC**：表示无论事件发布的线程是哪一个，事件处理函数始终会新建一个子线程运行，同样不能进行UI操作。
 
-### 1.2 EventBus 使用
+## 2、EventBus 使用
 
-#### 引入依赖
+### 2.1 引入依赖
 
 在使用之前先要引入如下依赖：
 
     implementation 'org.greenrobot:eventbus:3.1.1'
 
-#### 定义事件
+### 2.2 定义事件
 
 然后，我们定义一个事件的封装对象。在程序内部就使用该对象作为通信的信息：
 
@@ -48,7 +46,7 @@ public class MessageWrap {
 }
 ```
 
-#### 测试发布
+### 2.3 发布事件
 
 然后，我们定义一个Activity：
 
@@ -102,7 +100,7 @@ public class EventBusActivity2 extends CommonActivity<ActivityEventBus2Binding> 
 
 根据测试的结果，我们的确成功地接收到了发送的信息。
 
-#### 黏性事件
+### 2.4 黏性事件
 
 所谓的黏性事件，就是指发送了该事件之后再订阅者依然能够接收到的事件。使用黏性事件的时候有两个地方需要做些修改。一个是订阅事件的地方，这里我们在先打开的Activity中注册监听黏性事件：
 
@@ -122,7 +120,7 @@ public class EventBusActivity2 extends CommonActivity<ActivityEventBus2Binding> 
 
 按照上面的模式，我们先在第一个Activity中打开第二个Activity，然后在第二个Activity中发布黏性事件，并回到第一个Activity注册EventBus。根据测试结果，当按下注册按钮的时候，会立即触发上面的订阅方法从而获取到了黏性事件。
 
-#### 优先级
+### 2.5 优先级
 
 在`Subscribe`注解中总共有3个参数，上面我们用到了其中的两个，这里我们使用以下第三个参数，即`priority`。它用来指定订阅方法的优先级，是一个整数类型的值，默认是0，值越大表示优先级越大。在某个事件被发布出来的时候，优先级较高的订阅方法会首先接受到事件。
 
@@ -165,50 +163,7 @@ public class EventBusActivity2 extends CommonActivity<ActivityEventBus2Binding> 
 
 按照，上面的测试方式，首先我们在当前的Activity注册监听，然后跳转到另一个Activity，发布事件并返回。第一次的时候，这里的两个订阅方法都会被触发。然后，我们按下停止分发的按钮，并再次执行上面的逻辑，此时只有优先级较高的方法获取到了事件并将该事件终止。
 
-## 2、源码分析
-
-### 2.1 获取实例
-
-在创建EventBus实例的时候，一种方式是按照我们上面的形式，通过EventBus的静态方法`getDefault`来获取一个实例。`getDefault`本身会调用其内部的构造方法，通过传入一个默认的`EventBusBuilder`来创建EventBus。此外，我们还可以直接通过EventBus的`builder()`方法获取一个`EventBusBuilder`的实例，然后通过该构建者模式来个性化地定制自己的EventBus。即：
-
-    // 静态的单例实例
-    static volatile EventBus defaultInstance;
-
-    // 默认的构建者
-    private static final EventBusBuilder DEFAULT_BUILDER = new EventBusBuilder();
-
-    // 实际上使用了DCL双检锁机制，这里简化了一下
-    public static EventBus getDefault() {
-        if (defaultInstance == null) defaultInstance = new EventBus();
-        return defaultInstance;
-    }
-
-    public EventBus() {
-        this(DEFAULT_BUILDER);
-    }
-
-    // 调用getDefault的时候，最终会调用该方法，使用DEFAULT_BUILDER创建一个实例
-    EventBus(EventBusBuilder builder) {
-        // ...
-    }
-
-    // 也可以使用下面的方法获取一个构建者，然后使用它来个性化定制EventBus
-    public static EventBusBuilder builder() {
-        return new EventBusBuilder();
-    }
-
-### 2.2 注册
-
-
-
-### 2.3 取消
-
-### 2.4 通知
-
 ## 总结
 
-
-
-示例代码：[Github](https://github.com/Shouheng88/Android-references/tree/master/libraries/src/main/java/me/shouheng/libraries/eventbus)
-
+上面的内容是EventBus的基本使用方法，相关的源码参考：[Github](https://github.com/Shouheng88/Android-references/tree/master/libraries/src/main/java/me/shouheng/libraries/eventbus)
 
