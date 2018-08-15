@@ -49,7 +49,7 @@
 
 *EventBus IPC*
 
-- [EventBus 的使用使用](消息机制/EventBus的使用.md)
+- [EventBus 的使用](消息机制/EventBus的使用.md)
 - [EventBus 的源码解析](消息机制/EventBus的源码分析.md)
 
 <h2 id="network">网络</h2>
@@ -75,6 +75,9 @@
 <h2 id="reactive">响应式编程</h2>
 
 *RxJava*
+
+- [RxJava2 系列 （1）：一篇的比较全面的 RxJava2 方法总结](响应式编程/RxJava2系列·_一篇的比较全面的RxJava2方法总结.md)
+- [RxJava2 系列 （1）：Flowable和背压](响应式编程/Flowable和背压.md)
 
 <h2 id="kotlin">Kotlin</h2>
 
