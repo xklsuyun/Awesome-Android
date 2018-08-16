@@ -77,7 +77,7 @@
 *RxJava*
 
 - [RxJava2 系列 （1）：一篇的比较全面的 RxJava2 方法总结](响应式编程/RxJava2系列·_一篇的比较全面的RxJava2方法总结.md)
-- [RxJava2 系列 （1）：Flowable和背压](响应式编程/Flowable和背压.md)
+- [RxJava2 系列 （2）：Flowable和背压](响应式编程/Flowable和背压.md)
 
 <h2 id="kotlin">Kotlin</h2>
 
