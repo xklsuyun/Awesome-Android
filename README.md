@@ -8,14 +8,13 @@
 
 - [四大组件](#components)
 - [控件](#views)
-- [资源](#resources)
-- [图片](#images)
+- [资源 & 图片](#resources_images)
 - [动画](#animation)
 - [消息机制](#message)
 - [网络](#network)
 - [多线程](#multi_threads)
 - [多媒体](#media)
-- [JNI&NDK](#jni_ndk)
+- [JNI & NDK](#jni_ndk)
 - [响应式编程](#reactive)
 - [Kotlin](#kotlin)
 - [结构设计](#structure)
@@ -34,13 +33,9 @@
 
 *常用控件梳理 事件分发机制 自定义控件 Window*
 
-<h2 id="resources">资源</h2>
+<h2 id="resources_images">资源 & 图片</h2>
 
-*Strings Dimens Drawable Menu Array*
-
-<h2 id="images">图片</h2>
-
-*Bitmap Drawable Glide*
+*Strings Dimens Drawable Menu Array Bitmap Drawable Glide*
 
 <h2 id="animation">动画</h2>
 
@@ -55,9 +50,9 @@
 
 <h2 id="network">网络</h2>
 
-*OKHttp*
+*OKHttp Retrofit*
 
-<h2 id="multi_threads">多线程</h2>
+<h2 id="multi_threads">多线程 & 并发</h2>
 
 *多线程 JUC*
 
@@ -84,7 +79,7 @@
 
 <h2 id="structure">结构设计</h2>
 
-<h2 id="performance">性能优化&异常处理</h2>
+<h2 id="performance">性能优化 & 异常处理</h2>
 
 <h2 id="system_framework">系统架构</h2>
 
@@ -93,6 +88,15 @@
 - [Android 系统架构](系统架构/Android系统架构.md)
 
 <h2 id="libararies">三方库学习</h2>
+
+*EventBus RxJava OKHttp Retrofit Glide ButterKnife*
+
+- [EventBus](#message)
+- [RxJava](#reactive)
+- [OKHttp](#network)
+- [Retrofit](#network)
+- [Glide](#resources_images)
+- [ButterKnife]()
 
 <h2 id="make_up">资源整理</h2>
 
