@@ -79,6 +79,10 @@
 
 <h2 id="structure">结构设计</h2>
 
+*MVC MVP MVVM 组建化*
+
+- [探索 Android 应用架构设计：MVC & MVP & MVVM & 组件化](架构设计/探索Android架构设计.md)
+
 <h2 id="performance">性能优化 & 异常处理</h2>
 
 <h2 id="system_framework">系统架构</h2>
