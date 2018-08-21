@@ -81,7 +81,7 @@
 
 *MVC MVP MVVM 组建化*
 
-- [探索 Android 应用架构设计：MVC & MVP & MVVM & 组件化](架构设计/探索Android架构设计.md)
+- [Android 应用架构设计探索：MVC、MVP、MVVM和组件化](结构设计/探索Android架构设计.md)
 
 <h2 id="performance">性能优化 & 异常处理</h2>
 
